@@ -61,7 +61,7 @@ class DagsterCloudClient:
         2. GET the presigned URL to fetch the manifest JSON.
         """
         url = f"{self.base_url}/{self.organization}/gen_artifact_get"
-        fire_event(msg=f"Requesting artifact URL from {url}")
+        fire_event(msg=f"Requesting manifest from Dagster Cloud ({self.base_url}/{self.organization})")
 
         response = requests.post(
             url,
